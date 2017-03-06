@@ -16,7 +16,7 @@ import org.deeplearning4j.models.word2vec.Word2Vec;
 public class Word2VecHandler {
     private static Word2Vec instance = null;
     private static final String CORPUS_FILE_ROUTE = "data/word2vec/GoogleNews-vectors-negative300.bin.gz";
-    private static final String CORPUS_URL = "https://drive.google.com/open?id=0B7XkCwpI5KDYNlNUTTlSS21pQmM";
+    private static final String CORPUS_URL = "https://drive.google.com/uc?export=download&confirm=M3we&id=0B7XkCwpI5KDYNlNUTTlSS21pQmM";
 
     public static Word2Vec getInstance() {
         if(instance == null) {

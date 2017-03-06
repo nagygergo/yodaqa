@@ -14,7 +14,6 @@ import org.deeplearning4j.models.word2vec.Word2Vec;
 
 
 public class Word2VecHandler {
-    private final static Logger logger = LoggerFactory.getLogger(Word2VecHandler.class);
     private static Word2Vec instance = null;
     private static final String CORPUS_FILE_ROUTE = "data/word2vec/GoogleNews-vectors-negative300.bin.gz";
     private static final String CORPUS_URL = "https://drive.google.com/open?id=0B7XkCwpI5KDYNlNUTTlSS21pQmM";
@@ -41,7 +40,6 @@ public class Word2VecHandler {
         FileOutputStream fos;
         byte[] fileData;
         try {
-            logger.log("Corpus not found. Downloading googleNews-word2vec corpus.");
             url = new URL(CORPUS_URL); //File Location goes here
             con = url.openConnection(); // open the url connection.
             dis = new DataInputStream(con.getInputStream());

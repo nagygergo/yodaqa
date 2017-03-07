@@ -86,11 +86,15 @@ if [ -n "$maxheapsize" ]; then
 	sed -i -e 's/maxHeapSize.*/maxHeapSize = "'$maxheapsize'"/' build.gradle
 fi
 
-echo "Checked out in $clonedir"
+echo "Checked out in! -f /tmp/foo. $clonedir"
 sleep 2
 
 # Pre-build so we don't do that twice
 time ./gradlew check
+
+if [ -f "$baserepo"/data/word2vec/GoogleNews-vectors-negative300.bin.gz]
+    mkdir "$clonedir/data/word2vec"
+    cp "$baserepo"/data/word2vec/GoogleNews-vectors-negative300.bin.gz "$clonedir"/data/word2vec/GoogleNews-vectors-negative300.bin.gz
 
 echo "Starting evaluation in $clonedir"
 sleep 2

@@ -93,7 +93,7 @@ sleep 2
 time ./gradlew check
 
     mkdir -p data/word2vec
-    cp "$baserepo"/data/word2vec/GoogleNews-vectors-negative300.bin.gz data/word2vec/GoogleNews-vectors-negative300.bin.gz || _
+    cp "$baserepo"/data/word2vec/GoogleNews-vectors-negative300.bin.gz data/word2vec/GoogleNews-vectors-negative300.bin.gz || :
 
 
 echo "Starting evaluation in $clonedir"

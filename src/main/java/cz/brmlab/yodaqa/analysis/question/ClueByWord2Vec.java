@@ -32,7 +32,7 @@ import java.util.Collection;
 public class ClueByWord2Vec extends JCasAnnotator_ImplBase {
     final Logger logger = LoggerFactory.getLogger(ClueByWord2Vec.class);
     final static private int CLOSEST_WORD_COUNT = 10;
-    private Word2Vec vec;
+    private Word2VecHandler vec;
 
 
     public void initialize(UimaContext aContext) throws ResourceInitializationException {

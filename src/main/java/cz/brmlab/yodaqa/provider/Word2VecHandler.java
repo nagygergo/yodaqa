@@ -44,4 +44,23 @@ public class Word2VecHandler {
 
         return wordList;
     }
+
+    public Double similarity(String word1, String word2) {
+        String transformedWord1, transformedWord2;
+        Double similarityValue;
+        if(vec == null) {
+            similarityValue = null;
+        } else {
+            transformedWord1 = word1.replaceAll(" ", "_");
+            transformedWord2 = word2.replaceAll(" ", "_");
+
+            similarityValue = vec.similarity(word1.replaceAll(" ", "_"),word2.replaceAll(" ", "_"));
+        }
+
+            if (Math.abs(similarityValue) > 1.0) {
+            similarityValue = null;
+            }
+
+        return similarityValue;
+    }
 }

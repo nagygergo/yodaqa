@@ -19,6 +19,11 @@ public class SolrNamedSource {
 		register(name, solr);
 	}
 
+	public static void register(String name, String serverUrl) throws Exception {
+		Solr solr = new Solr(serverUrl);
+		register(name, solr);
+	}
+
 	public static void register(String name, Solr solr) {
 		solrNameMap.put(name, solr);
 	}

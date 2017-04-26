@@ -57,6 +57,7 @@ public class YodaQA /* XXX: extends AggregateBuilder ? */ {
 			//SolrNamedSource.register("guten", "data/guten", null);
 			//SolrNamedSource.register("enwiki", "collection1", "http://127.0.0.1:8983/solr/");
 			SolrNamedSource.register("enwiki", "collection1", UrlManager.lookUpUrl(UrlManager.DataBackends.SOLR.ordinal()));
+			SolrNamedSource.register("twitter", "http://127.0.0.1:8983/solr/tweets2");
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.err.println("*** Exception caught during SolrNamedSource initialization. ***");

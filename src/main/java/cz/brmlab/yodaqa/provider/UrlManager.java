@@ -28,7 +28,7 @@ public class UrlManager {
 	}
 
 	public enum DataBackends {
-		DBPEDIA, FREEBASE, LABEL1, LABEL2, SOLR
+		DBPEDIA, FREEBASE, LABEL1, LABEL2, SOLR, TWEETSOLR
 	}
 
 	private static String[][] urlLookUpTable;

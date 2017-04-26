@@ -126,7 +126,7 @@ public class SolrFullPrimarySearch extends JCasMultiplier_ImplBase {
 		/* Eew... well, for now, we just expect that only a single
 		 * Solr source has been registered and grab that one,
 		 * whatever its name (allows easy enwiki/guten switching). */
-		this.srcName = (String) SolrNamedSource.nameSet().toArray()[0];
+		this.srcName = "enwiki";
 		this.solr = SolrNamedSource.get(srcName);
 
 		if (searchFullText) {

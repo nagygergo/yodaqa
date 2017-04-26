@@ -43,6 +43,8 @@ public class AnswerEvidencingAE /* XXX: extends AggregateBuilder ? */ {
 		 * measure the number of hits. */
 		builder.add(createPrimitiveDescription(SolrHitsCounter.class));
 
+		builder.add(createPrimitiveDescription(TweetHitCounter.class));
+
 
 		/* Some debug dumps of the intermediate CAS. */
 		if (false) {//logger.isDebugEnabled()) {

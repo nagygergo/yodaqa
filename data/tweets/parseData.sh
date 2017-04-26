@@ -1,0 +1,1 @@
+sed -e "s/\"/'/g" -e 's/.*/\{text:"&\"}/' -e 's/$/,/g' -e '$ s/,$//' tweet_all_text.txt > output.json && value=`cat output.json` && echo "[$value]" > output.json

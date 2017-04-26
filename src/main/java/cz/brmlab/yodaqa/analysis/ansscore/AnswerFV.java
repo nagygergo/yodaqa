@@ -102,7 +102,9 @@ public class AnswerFV {
 			"solrHitsMaxScoreEv",
 		"phase0Score", "phase1Score",
 		"questionClassABBR", "questionClassDESC", "questionClassENTY",
-	    "questionClassHUM", "questionClassLOC", "questionClassNUM"
+	    "questionClassHUM", "questionClassLOC", "questionClassNUM", "tweetHitsEv", "tweetAHitsEv",
+			"tweetHitsANormEv", "tweetMaxScoreEv",
+			"tweetHitsMaxScoreEv",
 	};
 
 	protected double values[]; // the feature value

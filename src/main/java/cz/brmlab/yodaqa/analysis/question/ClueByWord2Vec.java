@@ -55,6 +55,7 @@ public class ClueByWord2Vec extends JCasAnnotator_ImplBase {
         clue.setWeight(1.0);
         clue.setLabel(label);
         clue.setIsReliable(false);
+        clue.addToIndexes();
         logger.debug("new by {}: {}", base.getType().getShortName(), clue.getLabel());
     }
 }

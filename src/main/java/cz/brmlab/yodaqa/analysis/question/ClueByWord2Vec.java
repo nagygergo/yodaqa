@@ -44,15 +44,17 @@ public class ClueByWord2Vec extends JCasAnnotator_ImplBase {
         for (Clue originClue  : JCasUtil.select(jcas, Clue.class)) {
             Collection<String> closeStrings = vec.wordsNearest(originClue.getLabel(), CLOSEST_WORD_COUNT);
             for(String string : closeStrings) {
-                addClue(jcas, originClue, string);
+                addClue(jcas, originClue, string, originClue);
             }
         }
     }
 
-    protected void addClue(JCas jcas, Annotation base, String label) {
+    protected void addClue(JCas jcas, Annotation base, String label, Clue originClue) {
         Clue clue = new Clue(jcas);
+        clue.setBegin(originClue.getBegin());
+        clue.setEnd(originClue.getEnd());
         clue.setBase(base);
-        clue.setWeight(1.0);
+        clue.setWeight(originClue.getWeight());
         clue.setLabel(label);
         clue.setIsReliable(false);
         clue.addToIndexes();

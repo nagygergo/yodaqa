@@ -25,7 +25,7 @@ run {
   if (project.hasProperty('execArgs'))
     args(execArgs.split(' '))
   minHeapSize = "2048m"
-  maxHeapSize = "3100m"
+  maxHeapSize = "9100m"
   systemProperties = System.getProperties()
 }
 
